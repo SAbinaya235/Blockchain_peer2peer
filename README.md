@@ -1,126 +1,88 @@
-# 🔗 Blockchain P2P Network
+# Blockchain P2P Network
 
-A beautiful, simplified blockchain implementation with peer-to-peer networking and a stunning dark theme interface.
+This project is a simplified implementation of a blockchain system with peer-to-peer (P2P) networking capabilities and a web-based dashboard interface. It is intended for educational purposes to demonstrate key blockchain concepts, including transactions, mining, and consensus.
 
-## ✨ Features
+## Features
 
-- **Dark Theme**: Beautiful gradient design with dark pink, yellow, blue, and green accents
-- **Simple Interface**: Clean, easy-to-use web dashboard
-- **Blockchain Core**: Complete blockchain with blocks, transactions, and mining
-- **P2P Network**: 4 nodes that communicate and sync automatically
-- **Real-time Updates**: Live status monitoring and automatic refresh
+* **Blockchain Core**: Implements blocks, transactions, proof-of-work mining, and chain validation.
+* **P2P Node Communication**: Multiple nodes that register with one another and maintain synchronized blockchains.
+* **Transaction Creation**: Users can create and broadcast transactions through the web interface.
+* **Block Mining**: Nodes can mine pending transactions into blocks using a basic proof-of-work algorithm.
+* **Blockchain Viewer**: View the current state of the blockchain from any participating node.
+* **Web Interface**: A simple frontend for managing nodes, transactions, mining, and viewing blockchain data.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── blockchain.py          # Core blockchain logic
-├── node_server.py         # Individual node server
-├── simple_dashboard.py    # Web interface server
-├── templates/simple.html  # Beautiful dark theme UI
+├── node_server.py         # Flask server for each node
+├── simple_dashboard.py    # Web dashboard interface
+├── templates/simple.html  # HTML template for the dashboard
 ├── requirements.txt       # Python dependencies
-└── README.md             # This file
+└── README.md              # Project overview
 ```
 
-## 🚀 Quick Start
+## Installation
 
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+1. Install dependencies:
 
-### 2. Start the Dashboard
-```bash
-python simple_dashboard.py
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 3. Open Your Browser
-Go to: **http://localhost:8080**
+2. Run the dashboard:
 
-## 🎨 Beautiful Dark Theme
+   ```bash
+   python simple_dashboard.py
+   ```
 
-The interface features:
-- **Black gradient background** with subtle depth
-- **Dark pink** (#ff6b9d) for primary actions
-- **Dark yellow** (#ffd93d) for highlights and stats
-- **Dark blue** (#45b7d1) for info elements
-- **Dark green** (#4ecdc4) for success states
-- **Smooth animations** and hover effects
-- **Custom scrollbars** with gradient colors
+3. Open the application in a web browser at:
 
-## 🎯 How to Use
+   ```
+   http://localhost:8080
+   ```
 
-### Start the Network
-1. Click **"Start All Nodes"** button
-2. Watch all 4 nodes turn green (online)
-3. Nodes automatically register with each other
+## Usage
 
-### Create Transactions
-1. Fill in the transaction form:
-   - **From**: Who is sending money
-   - **To**: Who is receiving money
-   - **Amount**: How much money
-   - **Node**: Which node to use
-2. Click **"Send Transaction"**
+### Starting the Network
 
-### Mine Blocks
-1. Click **"Mine"** on any online node
-2. Watch the mining process (takes a few seconds)
-3. New block is created with pending transactions
+* Start all nodes from the dashboard. Nodes automatically register with each other and form a P2P network.
 
-### View Blockchain
-1. Select a node from the dropdown
-2. Click **"View Blockchain"**
-3. See all blocks and transactions in beautiful cards
+### Creating a Transaction
 
-### Stop Everything
-1. Click **"Stop All Nodes"**
-2. All nodes shut down cleanly
+* Provide sender, receiver, and amount through the form.
+* Choose a node to broadcast the transaction.
 
-## 🎨 Color Palette
+### Mining a Block
 
-| Element | Color | Hex Code |
-|---------|-------|----------|
-| Primary Actions | Dark Pink | #ff6b9d |
-| Success States | Dark Green | #4ecdc4 |
-| Warning/Info | Dark Yellow | #ffd93d |
-| Info Elements | Dark Blue | #45b7d1 |
-| Background | Black Gradient | #0a0a0a → #1a1a1a |
-| Cards | Dark Gray | #1e1e1e → #2d2d2d |
+* Select a node and trigger the mining process.
+* The node performs proof-of-work and appends a new block to its blockchain containing pending transactions.
+* Other nodes sync the chain based on the longest valid chain rule.
 
-## 🔧 Technical Details
+### Viewing the Blockchain
 
-- **Mining Difficulty**: 4 leading zeros (easy for demo)
-- **Hash Algorithm**: SHA-256
-- **Consensus**: Longest chain wins
-- **Auto-sync**: Every 30 seconds
-- **Real-time Updates**: Every 5 seconds
+* Select any node to display its blockchain.
+* Each block contains its index, timestamp, transactions, nonce, and previous hash.
 
-## 📱 Responsive Design
+### Shutting Down
 
-The interface works perfectly on:
-- Desktop computers
-- Tablets
-- Mobile phones
-- All screen sizes
+* All nodes can be stopped cleanly from the dashboard interface.
 
-## 🎉 Perfect for Learning
+## Technical Details
 
-This simplified version focuses on the **core blockchain concepts**:
-- How blocks are created and linked
-- How transactions work
-- How mining secures the network
-- How nodes communicate
-- How consensus works
+* **Hashing Algorithm**: SHA-256
+* **Consensus Mechanism**: Longest valid chain
+* **Mining Difficulty**: Configured to allow easy demonstration (e.g., 4 leading zeros)
+* **Synchronization Interval**: Nodes auto-sync periodically to maintain consistency
+* **Interface Polling**: Real-time UI updates to reflect network status and blockchain state
 
-**No overwhelming complexity** - just the essential blockchain concepts in a beautiful, easy-to-use interface!
+## Purpose
 
-## 🚀 Ready to Explore?
+This project provides a foundational understanding of:
 
-1. Start the dashboard: `python simple_dashboard.py`
-2. Open http://localhost:8080
-3. Click "Start All Nodes"
-4. Create some transactions
-5. Mine some blocks
-6. Explore the blockchain!
+* How transactions are recorded in a distributed ledger
+* How blocks are mined and linked cryptographically
+* How P2P networks maintain consensus
+* How basic blockchain synchronization and validation mechanisms operate
 
-The beautiful dark theme makes learning blockchain technology both educational and visually stunning! ✨ 
+---
