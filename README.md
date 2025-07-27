@@ -77,6 +77,11 @@ See it live at : https://blockchain-peer2peer.onrender.com/
 * **Synchronization Interval**: Nodes auto-sync periodically to maintain consistency
 * **Interface Polling**: Real-time UI updates to reflect network status and blockchain state
 
+## Output Screenshot
+
+<img width="1757" height="860" alt="image" src="https://github.com/user-attachments/assets/ff0144b1-14e6-4a4c-80b3-ea805cc92c50" />
+<img width="1642" height="672" alt="image" src="https://github.com/user-attachments/assets/821b3d7e-4e24-40e4-852b-a4b767b724ff" />
+
 ## Purpose
 
 This project provides a foundational understanding of:
